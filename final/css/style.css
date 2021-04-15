@@ -1,0 +1,134 @@
+body{
+  background-image: url(https://images.wallpaperscraft.ru/image/poverhnost_seryy_temnyy_svetlyy_ten_18440_2560x1080.jpg);
+}
+
+.loader {
+    background: none repeat scroll 0 0 rgba(255,255,255,.5);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.loader_inner {
+    background-image: url(https://cntik-odoev.ru/pics/loading_spinner.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+}
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navbar-logo {display: inline-block;}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.menu-main li {display: inline-block;}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: white;
+  transition:.3s linear;
+}
+
+.gelereya-kartinok {
+  margin: auto;
+  max-width: 785px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1vmin;
+}
+.gelereya-kartinok a {
+  grid-column: span 2;
+  z-index: 1;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  margin-bottom: -52%;
+  transform: scale(1);
+  transition: all .25s;
+}
+.gelereya-kartinok a:nth-child(7n + 1) {
+  grid-column: 2 / span 2;
+}
+.gelereya-kartinok a:hover {
+  z-index: 2;
+  transform: scale(1.6);
+}
+.gelereya-kartinok img {
+  max-width: 100%;
+}
+.three {
+  padding: 100px 20px;
+  text-align: center;
+}
+.three h1 {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  color: white;
+  background: rgba(255,255,255,.5);
+  font-size: 2.5em;
+  font-weight: normal;
+  padding: 10px 40px;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+}
+.three h1:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -15px
+}
+.three h1:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 80%;
+  border-top: 10px solid black;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+}
+@media (max-width: 500px) {
+  .three h1 {font-size: 1.8em;}
+}
+@media (max-width: 400px) {
+  .three h1 {
+    font-size: 1.5em;
+    padding: 10px 30px;
+  }
+}

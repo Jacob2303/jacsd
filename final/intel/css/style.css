@@ -1,0 +1,105 @@
+body{
+  background-image: url(https://www.zastavki.com/pictures/originals/2015/Backgrounds_The_black_model_is_a_chemical_element__gray_background_106992_.jpg);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  padding: 25px 0 5px;
+  text-align: center;
+
+}
+.container{
+  background: white;
+}
+
+h1{
+  text-align: center;
+  font: white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: white;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: white;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: white;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px;
+  margin: 0 30px;
+}
+}
+.banner-container {
+    overflow: hidden;
+    position: relative;
+    padding: 40px;
+}
+.banner-container ul {
+    padding: 0;
+    display: flex;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+}
+.banner-container li {
+    clip-path: polygon(60px 0%, 100% 0%, calc(100% - 60px) 100%, 0% 100%);
+    position: relative;
+    margin: 0 -35px;
+    width: calc(100% / 5 + 70px);
+    transition: width 0.5s ease-in;
+}
+.banner-container li a {
+    display: block;
+    background: #000;
+}
+.banner-container li a img {
+    max-width: none;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: opacity 0.7s ease-in;
+}
+.banner-container ul li:hover {
+    width: 100%;
+}
+.banner-container ul li:hover a img {
+    opacity: 1;
+}
+.banner {
+  background: #a770ef;
+  background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+  background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+}
